@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Agentic Workbench | DotNetAI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/app.css">
+  <script type="module" src="/app.js"></script>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" aria-label="Agent scenarios">
+      <a class="brand" href="/" aria-label="DotNetAI Agentic Workbench home">
+        <span class="brand-mark" aria-hidden="true">DA</span>
+        <span class="brand-copy"><strong>DotNetAI</strong><small>AGENTIC WORKBENCH</small></span>
+      </a>
+      <div class="nav-heading"><span>SCENARIO LIBRARY</span><span id="sample-count" class="count-mark">--</span></div>
+      <nav id="scenario-list" class="scenario-list" aria-label="Choose a scenario"></nav>
+      <div class="sidebar-foot">
+        <span class="foot-mark" aria-hidden="true">.NET</span>
+        <div><strong>Local lab</strong><small>net9.0 · tool calling</small></div>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <div class="breadcrumb"><span>LEARNING LAB</span><span class="crumb-slash">/</span><span>AGENTIC AI</span></div>
+        <output id="ollama-status" class="connection-status" aria-label="Ollama connection status" aria-live="polite">
+          <span class="status-dot"></span><span>Checking Ollama</span>
+        </output>
+      </header>
+
+      <section class="workspace" aria-labelledby="scenario-title">
+        <div class="scenario-heading">
+          <div class="eyebrow"><span id="scenario-id">--</span><span class="eyebrow-rule"></span><span>FIELD SCENARIO</span></div>
+          <h1 id="scenario-title">Loading scenarios</h1>
+          <p id="scenario-description" class="scenario-description"></p>
+        </div>
+
+        <section class="run-bar" aria-label="Run configuration">
+          <fieldset class="mode-switch">
+            <legend>MODEL SOURCE</legend>
+            <div class="mode-options">
+              <label class="mode-option">
+                <input type="radio" name="mode" value="mock" checked>
+                <span class="radio-indicator" aria-hidden="true"></span>
+                <span>Mock</span>
+              </label>
+              <label class="mode-option">
+                <input type="radio" name="mode" value="ollama">
+                <span class="radio-indicator" aria-hidden="true"></span>
+                <span>Local Ollama</span>
+              </label>
+            </div>
+          </fieldset>
+          <div class="run-actions">
+            <label class="turn-select" for="turn-limit">TURN CAP
+              <select id="turn-limit" aria-label="Maximum agent turns">
+                <option value="3">3</option>
+                <option value="5" selected>5</option>
+                <option value="8">8</option>
+                <option value="12">12</option>
+              </select>
+            </label>
+            <button id="run-button" class="run-button" type="button"><span>Run scenario</span><span aria-hidden="true">↗</span></button>
+          </div>
+        </section>
+
+        <div id="error-banner" class="error-banner" role="alert" hidden></div>
+
+        <div class="detail-grid">
+          <section class="task-panel" aria-labelledby="task-heading">
+            <div class="panel-heading"><span class="section-index">01</span><h2 id="task-heading">Agent assignment</h2></div>
+            <p id="scenario-goal" class="goal-text"></p>
+            <div class="tool-section">
+              <div class="minor-heading"><span>AVAILABLE TOOLS</span><span id="tool-count">0</span></div>
+              <ul id="tool-list" class="tool-list"></ul>
+            </div>
+          </section>
+
+          <section class="result-panel" aria-labelledby="result-heading" aria-live="polite">
+            <div class="panel-heading"><span class="section-index">02</span><h2 id="result-heading">Run validation</h2><span id="latest-validity" class="validity-label">AWAITING RUN</span></div>
+            <div id="empty-result" class="empty-result">
+              <span class="empty-glyph" aria-hidden="true">//</span>
+              <p>No run recorded for this scenario.</p>
+            </div>
+            <div id="latest-result" hidden></div>
+          </section>
+        </div>
+
+        <section class="history-section" aria-labelledby="history-heading">
+          <div class="history-heading">
+            <div class="panel-heading"><span class="section-index">03</span><h2 id="history-heading">Run history</h2></div>
+            <button id="clear-history" class="clear-button" type="button" disabled>Clear history</button>
+          </div>
+          <div id="run-history" class="run-history"><p class="history-empty">Runs from this session appear here.</p></div>
+        </section>
+      </section>
+      <footer class="page-footer"><span>FIXTURE-BACKED SAMPLE TOOLS</span><span>NO EXTERNAL ACTIONS ARE EXECUTED</span></footer>
+    </main>
+  </div>
+</body>
+</html>

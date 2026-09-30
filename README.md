@@ -30,6 +30,8 @@ DotNetAI/
 │   ├── 09-SafetyGuardrails/               # PII masking (SSN/CC/ApiKey), prompt injection detection, output sanitizer
 │   ├── 10-AIEvaluation-Judge/             # LLM-as-a-Judge evaluating Faithfulness, Relevance, and Coherence
 │   └── DotNetAI.Runner/                   # Interactive CLI console runner with menu and batch flags
+├── samples/
+│   └── AgenticAI/                          # Ten separate real-world agentic workflow examples
 ├── tests/
 │   ├── DotNetAI.Core.Tests/               # Unit tests for core primitives, token estimators, vector math (18 tests)
 │   └── DotNetAI.UseCases.Tests/           # Integration tests across all 10 use cases and multiple scenarios (35 tests)
@@ -87,6 +89,19 @@ dotnet run --project src/DotNetAI.Runner/DotNetAI.Runner.csproj
 ### 4. Execute All Use Cases in Batch (Offline / Fast)
 ```powershell
 dotnet run --project src/DotNetAI.Runner/DotNetAI.Runner.csproj -- --all --mock
+```
+
+### 5. Explore Real-World Agentic AI Workflows
+```powershell
+dotnet run --project samples/AgenticAI/DotNetAI.AgenticAI.Samples.csproj -- --mock --all
+```
+
+The separate [Agentic AI samples](./samples/AgenticAI/README.md) include support triage, incident investigation, pull request review, invoice intake, release readiness, dependency vulnerability triage, migration planning, accessibility remediation, documentation research, and customer feedback synthesis. They run with local fixture data in mock mode or use Ollama for live model-driven tool selection.
+
+Launch the browser explorer to switch between mock and local Ollama runs and inspect validation results:
+
+```powershell
+dotnet run --project samples/AgenticAI/Explorer/DotNetAI.AgenticAI.Explorer.csproj -- --urls http://localhost:5187
 ```
 
 ---

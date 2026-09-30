@@ -2,6 +2,12 @@
   <Folder Name="/src/">
     <Project Path="src/DotNetAI.Runner/DotNetAI.Runner.csproj" />
   </Folder>
+  <Folder Name="/samples/AgenticAI/">
+    <Project Path="samples/AgenticAI/DotNetAI.AgenticAI.Samples.csproj" />
+  </Folder>
+  <Folder Name="/samples/AgenticAI/Explorer/">
+    <Project Path="samples/AgenticAI/Explorer/DotNetAI.AgenticAI.Explorer.csproj" />
+  </Folder>
   <Folder Name="/src/01-PromptEngineering/">
     <Project Path="src/01-PromptEngineering/DotNetAI.PromptEngineering.csproj" />
   </Folder>
