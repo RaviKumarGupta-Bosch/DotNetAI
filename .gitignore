@@ -1,0 +1,10 @@
+**/bin/
+**/obj/
+.vs/
+.idea/
+TestResults/
+artifacts/
+.env
+.env.*
+*.user
+*.suo

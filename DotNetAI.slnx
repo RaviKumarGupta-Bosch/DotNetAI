@@ -1,0 +1,42 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/DotNetAI.Runner/DotNetAI.Runner.csproj" />
+  </Folder>
+  <Folder Name="/src/01-PromptEngineering/">
+    <Project Path="src/01-PromptEngineering/DotNetAI.PromptEngineering.csproj" />
+  </Folder>
+  <Folder Name="/src/02-StructuredOutputs/">
+    <Project Path="src/02-StructuredOutputs/DotNetAI.StructuredOutputs.csproj" />
+  </Folder>
+  <Folder Name="/src/03-FunctionCalling/">
+    <Project Path="src/03-FunctionCalling/DotNetAI.FunctionCalling.csproj" />
+  </Folder>
+  <Folder Name="/src/04-RAG-VectorSearch/">
+    <Project Path="src/04-RAG-VectorSearch/DotNetAI.RAG.csproj" />
+  </Folder>
+  <Folder Name="/src/05-Agentic-ReAct/">
+    <Project Path="src/05-Agentic-ReAct/DotNetAI.AgenticReAct.csproj" />
+  </Folder>
+  <Folder Name="/src/06-MultiAgent-Collaboration/">
+    <Project Path="src/06-MultiAgent-Collaboration/DotNetAI.MultiAgent.csproj" />
+  </Folder>
+  <Folder Name="/src/07-PlanAndSolve-Planner/">
+    <Project Path="src/07-PlanAndSolve-Planner/DotNetAI.PlanAndSolve.csproj" />
+  </Folder>
+  <Folder Name="/src/08-ConversationalMemory/">
+    <Project Path="src/08-ConversationalMemory/DotNetAI.ConversationalMemory.csproj" />
+  </Folder>
+  <Folder Name="/src/09-SafetyGuardrails/">
+    <Project Path="src/09-SafetyGuardrails/DotNetAI.SafetyGuardrails.csproj" />
+  </Folder>
+  <Folder Name="/src/10-AIEvaluation-Judge/">
+    <Project Path="src/10-AIEvaluation-Judge/DotNetAI.AIEvaluation.csproj" />
+  </Folder>
+  <Folder Name="/src/Common/">
+    <Project Path="src/Common/DotNetAI.Core/DotNetAI.Core.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/DotNetAI.Core.Tests/DotNetAI.Core.Tests.csproj" />
+    <Project Path="tests/DotNetAI.UseCases.Tests/DotNetAI.UseCases.Tests.csproj" />
+  </Folder>
+</Solution>

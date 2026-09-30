@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\Common\DotNetAI.Core\DotNetAI.Core.csproj" />
+    <ProjectReference Include="..\01-PromptEngineering\DotNetAI.PromptEngineering.csproj" />
+    <ProjectReference Include="..\02-StructuredOutputs\DotNetAI.StructuredOutputs.csproj" />
+    <ProjectReference Include="..\03-FunctionCalling\DotNetAI.FunctionCalling.csproj" />
+    <ProjectReference Include="..\04-RAG-VectorSearch\DotNetAI.RAG.csproj" />
+    <ProjectReference Include="..\05-Agentic-ReAct\DotNetAI.AgenticReAct.csproj" />
+    <ProjectReference Include="..\06-MultiAgent-Collaboration\DotNetAI.MultiAgent.csproj" />
+    <ProjectReference Include="..\07-PlanAndSolve-Planner\DotNetAI.PlanAndSolve.csproj" />
+    <ProjectReference Include="..\08-ConversationalMemory\DotNetAI.ConversationalMemory.csproj" />
+    <ProjectReference Include="..\09-SafetyGuardrails\DotNetAI.SafetyGuardrails.csproj" />
+    <ProjectReference Include="..\10-AIEvaluation-Judge\DotNetAI.AIEvaluation.csproj" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+</Project>
